@@ -1,23 +1,49 @@
-# tsdown-starter
+# rise-wallet-sdk
 
-A starter for creating a TypeScript package.
+Typescript SDK to integrate RISE wallet into your dApp.
 
-## Development
+## Usage
 
-- Install dependencies:
-
-```bash
-npm install
-```
-
-- Run the unit tests:
+1. Install porto, wagmi and the RISE wallet SDK:
 
 ```bash
-npm run test
+npm install porto wagmi rise-wallet
 ```
 
-- Build the library:
+2. Use the rise config when instantiating porto:
 
-```bash
-npm run build
+```typescript
+import { riseTestnetConfig, riseTestnet } from 'rise-wallet';
+import { createConfig, http } from 'wagmi';
+import { porto } from 'porto/wagmi';
+
+export const config = createConfig({
+  chains: [riseTestnet],
+	connectors: [porto(riseTestnetConfig)],
+	transports: {
+		[riseTestnet.id]: http()
+	}
+})
 ```
+
+3. Use wagmi as usual
+
+```typescript
+import { useConnect, useConnectors } from 'wagmi'
+
+function Connect() {
+  const connect = useConnect()
+  const connectors = useConnectors()
+
+  return connectors?.map((connector) => (
+    <button
+      key={connector.uid}
+      onClick={() => connect.connect({ connector })}
+    >
+      Connect
+    </button>
+  ))
+}
+```
+
+RISE wallet is powered by Porto under the hood. For more information on its usage, refer to the [Porto docs](https://porto.sh)

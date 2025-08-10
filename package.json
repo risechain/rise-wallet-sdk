@@ -1,5 +1,5 @@
 {
-  "name": "rise-wallet-sdk",
+  "name": "rise-wallet",
   "version": "0.1.1",
   "description": "Typescript SDK to integrate RISE wallet into your dApp.",
   "type": "module",
