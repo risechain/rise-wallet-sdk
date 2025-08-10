@@ -1,0 +1,45 @@
+{
+  "name": "rise-wallet-sdk",
+  "version": "0.1.0",
+  "description": "Typescript SDK to integrate RISE wallet into your dApp.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://github.com/risechain/rise-wallet-sdk#readme",
+  "bugs": {
+    "url": "https://github.com/risechain/rise-wallet-sdk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/risechain/rise-wallet-sdk.git"
+  },
+  "author": "hazelnutcloud <hzlntcld@pm.me>",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp && npm publish"
+  },
+  "devDependencies": {
+    "@types/node": "^24.2.1",
+    "bumpp": "^10.2.2",
+    "tsdown": "^0.14.0",
+    "typescript": "^5.9.2"
+  },
+  "peerDependencies": {
+    "porto": "^0.0.63",
+    "viem": "^2.33.3"
+  }
+}
