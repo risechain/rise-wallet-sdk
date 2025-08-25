@@ -33,13 +33,13 @@
     "release": "bumpp && npm publish"
   },
   "devDependencies": {
-    "@types/node": "^24.2.1",
-    "bumpp": "^10.2.2",
-    "tsdown": "^0.14.0",
+    "@types/node": "^24.3.0",
+    "bumpp": "^10.2.3",
+    "tsdown": "^0.14.1",
     "typescript": "^5.9.2"
   },
   "peerDependencies": {
-    "porto": "^0.0.63",
+    "porto": "^0.0.77",
     "viem": "^2.33.3"
   }
 }

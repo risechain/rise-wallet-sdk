@@ -10,16 +10,7 @@ export const riseTestnet = /*#__PURE__*/ define({
   contracts: {
     ...riseTestnetChain.contracts,
     portoAccount: {
-      address: "0x912a428b1a7e7cb7bb2709a2799a01c020c5acd9",
-    },
-  },
-  rpcUrls: {
-    default: {
-      ...riseTestnetChain.rpcUrls.default,
-      http: [
-        "https://rise-testnet-porto.fly.dev",
-        ...riseTestnetChain.rpcUrls.default.http,
-      ],
+      address: "0xc58C2A1Ce5cE4D7Fc7f997B983d9a859dbD2e507",
     },
   },
 });

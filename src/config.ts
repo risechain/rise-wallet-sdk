@@ -9,6 +9,8 @@ export const riseTestnetConfig: Config<[typeof riseTestnet]> = {
   mode: Mode.dialog({
     host: "https://rise-wallet-testnet.vercel.app/dialog",
   }),
+  relay: http("https://rise-testnet-porto.fly.dev"),
+  feeToken: "ETH",
   transports: {
     [riseTestnet.id]: http(),
   },
