@@ -1,6 +1,6 @@
 {
   "name": "rise-wallet",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Typescript SDK to integrate RISE wallet into your dApp.",
   "type": "module",
   "license": "MIT",
@@ -30,7 +30,7 @@
     "build": "tsdown",
     "dev": "tsdown --watch",
     "typecheck": "tsc --noEmit",
-    "release": "bumpp && npm publish"
+    "prepublishOnly": "bun run typecheck && bun run build && bumpp"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
