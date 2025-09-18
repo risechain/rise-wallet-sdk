@@ -10,7 +10,7 @@ export const riseTestnet = /*#__PURE__*/ define({
   contracts: {
     ...riseTestnetChain.contracts,
     portoAccount: {
-      address: "0xc58C2A1Ce5cE4D7Fc7f997B983d9a859dbD2e507",
+      address: "0xDF3E102d92320d119FEA727d3eF30F3570Bb3379",
     },
   },
 });
